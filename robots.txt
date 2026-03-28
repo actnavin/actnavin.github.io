@@ -1,0 +1,10 @@
+# robots.txt — Navin Kumar Portfolio
+# https://rubyonrails.info/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rubyonrails.info/sitemap.xml
+
+# All crawlers allowed
