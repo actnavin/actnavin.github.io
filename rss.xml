@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+  <channel>
+    <title>Navin Kumar — Engineering Leader</title>
+    <link>https://rubyonrails.info/</link>
+    <description>Application Engineering Leader · Ruby on Rails · AWS · Microservices · CI/CD. 9+ years building scalable SaaS platforms.</description>
+    <language>en-IN</language>
+    <copyright>© 2026 Navin Kumar. All rights reserved.</copyright>
+    <managingEditor>navinkumar2508@gmail.com (Navin Kumar)</managingEditor>
+    <webMaster>navinkumar2508@gmail.com (Navin Kumar)</webMaster>
+    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0530</lastBuildDate>
+    <pubDate>Sat, 28 Mar 2026 00:00:00 +0530</pubDate>
+    <ttl>2880</ttl>
+    <image>
+      <url>https://rubyonrails.info/og-image.png</url>
+      <title>Navin Kumar — Engineering Leader</title>
+      <link>https://rubyonrails.info/</link>
+      <width>1200</width>
+      <height>630</height>
+    </image>
+    <sy:updatePeriod>monthly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <atom:link href="https://rubyonrails.info/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Portfolio Updated — March 2026</title>
+      <link>https://rubyonrails.info/</link>
+      <guid isPermaLink="true">https://rubyonrails.info/#portfolio-2026</guid>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0530</pubDate>
+      <dc:creator>Navin Kumar</dc:creator>
+      <description>Navin Kumar's portfolio has been updated with his latest experience at CloudBolt Software as Lead Software Engineer, new skill highlights, and a refreshed editorial design.</description>
+      <content:encoded><![CDATA[
+        <p>Navin Kumar's portfolio has been updated for 2026 with:</p>
+        <ul>
+          <li><strong>Current role:</strong> Lead Software Engineer at CloudBolt Software (Jun 2022 – Present)</li>
+          <li>9+ years experience architecting scalable SaaS platforms</li>
+          <li>Expertise in Ruby on Rails, AWS, Azure, Microservices, CI/CD, PostgreSQL, Redis, Elasticsearch</li>
+          <li>Available for Senior / Lead Engineering roles globally</li>
+        </ul>
+        <p>Contact: <a href="mailto:navinkumar2508@gmail.com">navinkumar2508@gmail.com</a></p>
+      ]]></content:encoded>
+      <category>Engineering</category>
+      <category>Ruby on Rails</category>
+      <category>AWS</category>
+      <category>Microservices</category>
+    </item>
+
+    <item>
+      <title>Lead Software Engineer — CloudBolt Software</title>
+      <link>https://rubyonrails.info/#experience</link>
+      <guid isPermaLink="false">https://rubyonrails.info/#cloudbolt-lead</guid>
+      <pubDate>Tue, 01 Jun 2022 00:00:00 +0530</pubDate>
+      <dc:creator>Navin Kumar</dc:creator>
+      <description>Leading a team of 5+ engineers on enterprise SaaS for 10K+ users. Driving microservices migration, CI/CD improvements, ~30% performance gains, and 99.9%+ uptime.</description>
+      <category>Engineering Leadership</category>
+      <category>SaaS</category>
+      <category>Microservices</category>
+    </item>
+
+  </channel>
+</rss>
