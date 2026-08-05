@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://rubyonrails.info/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://rubyonrails.info/"/>
@@ -13,7 +13,7 @@
 
   <url>
     <loc>https://rubyonrails.info/#about</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -41,9 +41,37 @@
 
   <url>
     <loc>https://rubyonrails.info/#contact</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rubyonrails.info/blog/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

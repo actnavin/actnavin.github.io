@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found | Navin Kumar</title>
+  <meta name="robots" content="noindex, follow"/>
+  <meta name="theme-color" content="#faf8f3"/>
+
+  <link rel="icon"       type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon"       type="image/x-icon"  href="/favicon.ico"/>
+  <link rel="apple-touch-icon"                href="/apple-touch-icon.png" sizes="180x180"/>
+  <link rel="manifest"                        href="/site.webmanifest"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --paper: #faf8f3; --ink: #1a1712; --mid: #6b6560; --amber: #c8832a; --border: #e2dbd0;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Plus Jakarta Sans', sans-serif;
+      --mono:  'Fira Code', monospace;
+    }
+    body {
+      background: var(--paper); color: var(--ink); font-family: var(--sans);
+      min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 40px 20px;
+    }
+    .code { font-family: var(--serif); font-weight: 900; font-size: clamp(80px,20vw,180px); line-height: 1; -webkit-text-stroke: 2px var(--ink); color: transparent; }
+    h1 { font-family: var(--serif); font-size: clamp(24px,4vw,36px); font-weight: 900; margin: 8px 0 16px; }
+    h1 em { font-style: italic; color: var(--amber); }
+    p { color: var(--mid); font-size: 15px; max-width: 440px; line-height: 1.7; margin-bottom: 32px; }
+    .links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    a.btn {
+      font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+      padding: 13px 24px; border-radius: 2px; text-decoration: none; transition: all .2s;
+    }
+    a.btn-solid { background: var(--ink); color: var(--paper); }
+    a.btn-solid:hover { background: var(--amber); }
+    a.btn-outline { border: 1px solid var(--border); color: var(--ink); }
+    a.btn-outline:hover { border-color: var(--ink); }
+  </style>
+</head>
+<body>
+  <p class="code" aria-hidden="true">404</p>
+  <h1>Page <em>Not Found</em></h1>
+  <p>That page doesn't exist or has moved. Try the homepage, the blog, or get in touch directly.</p>
+  <div class="links">
+    <a class="btn btn-solid" href="/">Home</a>
+    <a class="btn btn-outline" href="/blog/">Blog</a>
+    <a class="btn btn-outline" href="/#contact">Contact</a>
+  </div>
+</body>
+</html>

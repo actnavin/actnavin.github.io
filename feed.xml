@@ -10,7 +10,7 @@
   <link rel="self"      type="application/atom+xml"   href="https://rubyonrails.info/feed.xml"/>
   <link rel="related"   type="application/rss+xml"    href="https://rubyonrails.info/rss.xml"/>
   <link rel="related"   type="application/feed+json"  href="https://rubyonrails.info/feed.json"/>
-  <updated>2026-03-28T00:00:00+05:30</updated>
+  <updated>2026-08-05T00:00:00+05:30</updated>
   <rights>© 2026 Navin Kumar. All rights reserved.</rights>
 
   <author>
@@ -21,6 +21,52 @@
 
   <logo>https://rubyonrails.info/og-image.png</logo>
   <icon>https://rubyonrails.info/favicon.svg</icon>
+
+  <!-- ── Blog entries ── -->
+  <entry>
+    <id>https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html</id>
+    <title type="text">12 Questions to Ask Before Hiring a Ruby on Rails Freelancer</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html"/>
+    <updated>2026-08-05T00:00:00+05:30</updated>
+    <published>2026-08-05T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;Twelve concrete screening questions — technical, process, and business — with what a strong answer sounds like versus a red flag.&lt;/p&gt;
+    </summary>
+    <category term="hiring" label="Hiring"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
+    <category term="freelance" label="Freelance"/>
+  </entry>
+
+  <entry>
+    <id>https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html</id>
+    <title type="text">Ruby on Rails Freelancer Rates in 2026: What to Budget</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html"/>
+    <updated>2026-08-05T00:00:00+05:30</updated>
+    <published>2026-08-05T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;Typical hourly ranges by seniority and region, what actually moves the price, and how to tell a fair quote from a red flag.&lt;/p&gt;
+    </summary>
+    <category term="hiring" label="Hiring"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
+    <category term="freelance" label="Freelance"/>
+  </entry>
+
+  <entry>
+    <id>https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html</id>
+    <title type="text">How to Hire a Ruby on Rails Developer in 2026</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html"/>
+    <updated>2026-08-05T00:00:00+05:30</updated>
+    <published>2026-08-05T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;Freelancer vs. agency vs. full-time, where to look, how to vet skill, red flags, and how to structure the contract.&lt;/p&gt;
+    </summary>
+    <category term="hiring" label="Hiring"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
+    <category term="freelance" label="Freelance"/>
+  </entry>
 
   <!-- ── Portfolio update entry ── -->
   <entry>

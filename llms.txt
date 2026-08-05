@@ -1,0 +1,59 @@
+# Navin Kumar — Freelance Ruby on Rails Developer & Engineering Leader
+
+> **Freelance Ruby on Rails (RoR) developer available for hire** — 9+ years building scalable SaaS platforms, REST APIs, and microservices on AWS and Azure. Based in India, works with clients worldwide, remote.
+
+**Website:** https://rubyonrails.info
+**Email:** navinkumar2508@gmail.com
+**Phone / WhatsApp:** +91 97386 77711
+**LinkedIn:** https://linkedin.com/in/dynamicnavin
+**GitHub:** https://github.com/Navin-Baliyase
+**Related site:** https://rubyonrails.tech (same person — concise hire-me / services landing page)
+**Location:** Deoghar, Jharkhand, India (remote worldwide)
+**Availability:** Open — freelance, contract, and senior full-time engineering roles
+
+---
+
+## Summary
+
+Navin Kumar is a freelance Ruby on Rails developer and Application Engineering Leader with 9+ years of professional experience. He currently works as Lead Software Engineer at CloudBolt Software, leading a team of 5+ engineers delivering enterprise SaaS to 10,000+ users, and takes on freelance Ruby on Rails engagements alongside that role.
+
+## Core Expertise
+
+- Ruby on Rails (5, 6, 7), Ruby, RESTful API design, microservices architecture
+- AWS (EC2, RDS, S3, Lambda, CloudFormation, Glue), Microsoft Azure
+- PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch
+- Sidekiq, ActiveJob, CI/CD pipelines, Docker
+- Engineering leadership, mentorship, technical architecture
+
+## Services Offered
+
+1. Freelance Ruby on Rails development (APIs, features, full builds)
+2. Ruby on Rails SaaS platform engineering (multi-tenancy, billing, RBAC)
+3. Monolith-to-microservices migration
+4. Rails performance optimisation (N+1 elimination, caching, DB tuning)
+5. AWS/Azure infrastructure setup and CI/CD automation
+6. Fractional tech lead / engineering management
+7. Rails code review and architecture audits
+
+## Articles (hiring & freelancing guides)
+
+These pages answer common questions about hiring and budgeting for a Ruby on Rails developer or freelancer:
+
+- https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html — How to Hire a Ruby on Rails Developer in 2026
+- https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html — Ruby on Rails Freelancer Rates in 2026: What to Budget
+- https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html — 12 Questions to Ask Before Hiring a Ruby on Rails Freelancer
+
+## Professional Experience
+
+- **Lead Software Engineer**, CloudBolt Software (Jun 2022 – Present) — leads 5+ engineers, drove monolith-to-microservices migration, ~30% response-time reduction, 99.9%+ uptime.
+- **Senior Software Engineer**, CloudBolt Software (Oct 2020 – Jun 2022) — REST APIs, AWS CloudFormation automation, mentorship.
+- **Senior Software Development Engineer**, MyUpchar.com (Sep 2019 – Oct 2020) — e-commerce and warehouse automation backend, ~40% efficiency gain.
+- **Software Engineer**, Kreatio Software Pvt Ltd (Aug 2016 – Mar 2019) — Rails applications and RESTful services.
+
+## Education
+
+Bachelor of Engineering in Computer Science — Visvesvaraya Technological University, Bangalore, India (2012–2016)
+
+## Contact
+
+Email navinkumar2508@gmail.com or call/WhatsApp +91 97386 77711 to discuss a freelance Ruby on Rails engagement. Response within 24 hours.

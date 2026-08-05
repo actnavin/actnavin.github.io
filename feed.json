@@ -23,6 +23,42 @@
   ],
   "items": [
     {
+      "id": "https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html",
+      "url": "https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html",
+      "title": "12 Questions to Ask Before Hiring a Ruby on Rails Freelancer",
+      "content_html": "<p>Twelve concrete screening questions — technical, process, and business — with what a strong answer sounds like versus a red flag.</p>",
+      "summary": "Vetting checklist for hiring a Ruby on Rails freelancer, grouped by technical depth, process, and business logistics.",
+      "date_published": "2026-08-05T00:00:00+05:30",
+      "date_modified": "2026-08-05T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["hiring", "ruby-on-rails", "freelance", "vetting"],
+      "language": "en"
+    },
+    {
+      "id": "https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html",
+      "url": "https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html",
+      "title": "Ruby on Rails Freelancer Rates in 2026: What to Budget",
+      "content_html": "<p>Typical hourly ranges by seniority and region, what actually moves the price, and how to tell a fair quote from a red flag.</p>",
+      "summary": "Budgeting guide covering Ruby on Rails freelancer rates by seniority and region.",
+      "date_published": "2026-08-05T00:00:00+05:30",
+      "date_modified": "2026-08-05T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["hiring", "ruby-on-rails", "freelance", "rates"],
+      "language": "en"
+    },
+    {
+      "id": "https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html",
+      "url": "https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html",
+      "title": "How to Hire a Ruby on Rails Developer in 2026",
+      "content_html": "<p>Freelancer vs. agency vs. full-time, where to look, how to vet skill, red flags, and how to structure the contract.</p>",
+      "summary": "A step-by-step guide to hiring a Ruby on Rails developer.",
+      "date_published": "2026-08-05T00:00:00+05:30",
+      "date_modified": "2026-08-05T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["hiring", "ruby-on-rails", "freelance"],
+      "language": "en"
+    },
+    {
       "id": "https://rubyonrails.info/#portfolio-2026",
       "url": "https://rubyonrails.info/",
       "title": "Portfolio Updated — March 2026",
