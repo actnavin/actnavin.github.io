@@ -122,8 +122,8 @@ table.rates tbody tr:hover { background: var(--cream); }
   padding: clamp(28px,4vw,40px); margin: 48px 0 12px;
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
 }
-.cta-box p { font-family: var(--serif); font-size: clamp(18px,2.4vw,24px); font-weight: 700; color: var(--paper); max-width: 420px; }
-.cta-box p em { color: var(--amber-l); font-style: italic; }
+.cta-box p, article.body .cta-box p { font-family: var(--serif); font-size: clamp(18px,2.4vw,24px); font-weight: 700; color: var(--paper); max-width: 420px; }
+.cta-box p em, article.body .cta-box p em { color: var(--amber-l); font-style: italic; }
 .btn-solid {
   font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
   background: var(--amber); color: var(--ink); padding: 14px 28px; border-radius: 2px;
@@ -131,6 +131,8 @@ table.rates tbody tr:hover { background: var(--cream); }
   white-space: nowrap;
 }
 .btn-solid:hover { background: var(--amber-l); }
+article.body .btn-solid { color: var(--ink); text-decoration: none; }
+article.body .btn-solid:hover { color: var(--ink); }
 
 /* ── author bio ── */
 .author-bio {
