@@ -210,12 +210,13 @@
         "@type": "BreadcrumbList",
         "@id": "https://rubyonrails.info/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",        "item": "https://rubyonrails.info/" },
-          { "@type": "ListItem", "position": 2, "name": "About",       "item": "https://rubyonrails.info/#about" },
-          { "@type": "ListItem", "position": 3, "name": "Experience",  "item": "https://rubyonrails.info/#experience" },
-          { "@type": "ListItem", "position": 4, "name": "Skills",      "item": "https://rubyonrails.info/#skills" },
-          { "@type": "ListItem", "position": 5, "name": "Education",   "item": "https://rubyonrails.info/#education" },
-          { "@type": "ListItem", "position": 6, "name": "Hire Me",     "item": "https://rubyonrails.info/#contact" }
+          { "@type": "ListItem", "position": 1, "name": "Home",          "item": "https://rubyonrails.info/" },
+          { "@type": "ListItem", "position": 2, "name": "About",         "item": "https://rubyonrails.info/#about" },
+          { "@type": "ListItem", "position": 3, "name": "Experience",    "item": "https://rubyonrails.info/#experience" },
+          { "@type": "ListItem", "position": 4, "name": "Testimonials",  "item": "https://rubyonrails.info/#testimonials" },
+          { "@type": "ListItem", "position": 5, "name": "Skills",        "item": "https://rubyonrails.info/#skills" },
+          { "@type": "ListItem", "position": 6, "name": "Education",     "item": "https://rubyonrails.info/#education" },
+          { "@type": "ListItem", "position": 7, "name": "Hire Me",       "item": "https://rubyonrails.info/#contact" }
         ]
       },
 
@@ -311,6 +312,16 @@
           },
           {
             "@type": "ListItem", "position": 4,
+            "item": {
+              "@type": "WorkExperience",
+              "name": "Software Engineer, Ruby on Rails — Pyramid IT Consulting",
+              "description": "Upgraded a legacy Ruby on Rails application for an insurance and healthcare client to a current supported release, including Sidekiq-based background job processing.",
+              "startDate": "2019-03", "endDate": "2019-08",
+              "worksFor": { "@type": "Organization", "name": "Pyramid IT Consulting Pvt Ltd" }
+            }
+          },
+          {
+            "@type": "ListItem", "position": 5,
             "item": {
               "@type": "WorkExperience",
               "name": "Ruby on Rails Software Engineer — Kreatio Software",
@@ -554,6 +565,19 @@
     .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .exp-bullets li { display: flex; gap: 14px; font-family: var(--sans); font-size: clamp(13px,1.4vw,15px); color: var(--mid); line-height: 1.65; }
     .exp-bullets li::before { content: '—'; color: var(--amber); flex-shrink: 0; font-weight: 700; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--cream); }
+    .testi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 0; }
+    .testi-card {
+      padding: clamp(28px,4vw,44px); border: 1px solid var(--border); margin: -1px 0 0 -1px;
+      opacity: 1; transform: none; transition: opacity .5s ease, transform .5s ease;
+    }
+    .testi-card.will-animate { opacity: 0; transform: translateY(16px); }
+    .testi-card.will-animate.vis { opacity: 1; transform: translateY(0); }
+    .testi-quote { font-family: var(--serif); font-style: italic; font-size: clamp(15px,1.7vw,18px); color: var(--ink); line-height: 1.7; margin-bottom: 22px; }
+    .testi-name { font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--ink); }
+    .testi-role { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
 
     /* ── SKILLS ── */
     #skills { background: var(--cream); }
@@ -886,6 +910,22 @@
 
           <li class="exp-item will-animate">
             <div class="exp-left">
+              <p class="exp-co">Pyramid IT Consulting Pvt Ltd</p>
+              <p class="exp-dt">Mar 2019 — Aug 2019</p>
+              <span class="exp-badge">6 mos</span>
+            </div>
+            <div class="exp-right">
+              <h3 class="exp-title">Software Engineer, Ruby on Rails</h3>
+              <ul class="exp-bullets">
+                <li>Upgraded a legacy Ruby on Rails application for an insurance and healthcare client from an older major version to a current, supported release</li>
+                <li>Modernised background job processing with Sidekiq as part of the migration</li>
+                <li>Worked directly with client stakeholders to scope and de-risk the upgrade in a compliance-sensitive domain</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="exp-item will-animate">
+            <div class="exp-left">
               <p class="exp-co">Kreatio Software Pvt Ltd</p>
               <p class="exp-dt">Aug 2016 — Mar 2019</p>
               <span class="exp-badge">2.5 yrs</span>
@@ -904,15 +944,62 @@
       </div>
     </section>
 
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section id="testimonials" aria-labelledby="testi-h2">
+      <div class="sec-wrap">
+        <div class="sec-header">
+          <div>
+            <p class="sec-label">03 — Client &amp; Peer Feedback</p>
+            <h2 id="testi-h2">What People <em>Say</em></h2>
+          </div>
+          <span class="sec-count" aria-hidden="true">03</span>
+        </div>
+
+        <div class="testi-grid">
+          <blockquote class="testi-card will-animate">
+            <p class="testi-quote">"Navin is a very knowledgeable and intelligent person and it is a joy working with him. Not only is he sharp with his programming skills, but is also very sensible to brainstorm business ideas and come up with a market-ready solution. I absolutely loved working with him and will definitely work again."</p>
+            <div class="testi-footer">
+              <p class="testi-name">Rohit Lalit Kapur</p>
+              <p class="testi-role">Client</p>
+            </div>
+          </blockquote>
+
+          <blockquote class="testi-card will-animate">
+            <p class="testi-quote">"Navin is a great guy to have in your team. His command over different technology domains makes him stand out. He single-handedly managed some very critical projects during the time I got an opportunity to work with him."</p>
+            <div class="testi-footer">
+              <p class="testi-name">Himanshu Goyal</p>
+              <p class="testi-role">Tech @ Yabx · Direct Manager</p>
+            </div>
+          </blockquote>
+
+          <blockquote class="testi-card will-animate">
+            <p class="testi-quote">"Navin is a fantastic person to work with — a diligent and intelligent professional. As a product manager you can count on him to get the job done. He thoroughly understands the product requirements and consistently delivers high-quality work."</p>
+            <div class="testi-footer">
+              <p class="testi-name">Pankaj Parihar</p>
+              <p class="testi-role">Director, CX at Jar</p>
+            </div>
+          </blockquote>
+
+          <blockquote class="testi-card will-animate">
+            <p class="testi-quote">"Navin is a professional well versed in ROR. He promptly replies to any queries and provides suggestions during the course of a project to make the process smoother."</p>
+            <div class="testi-footer">
+              <p class="testi-name">Mandeep Sandhu</p>
+              <p class="testi-role">Developer, E-commerce</p>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ SKILLS ═══ -->
     <section id="skills" aria-labelledby="skills-h2">
       <div class="sec-wrap">
         <div class="sec-header">
           <div>
-            <p class="sec-label">03 — Expertise</p>
+            <p class="sec-label">04 — Expertise</p>
             <h2 id="skills-h2">Technical <em>Skills</em></h2>
           </div>
-          <span class="sec-count" aria-hidden="true">03</span>
+          <span class="sec-count" aria-hidden="true">04</span>
         </div>
 
         <div class="skills-layout">
@@ -999,10 +1086,10 @@
       <div class="sec-wrap">
         <div class="sec-header">
           <div>
-            <p class="sec-label">04 — Common Questions</p>
+            <p class="sec-label">05 — Common Questions</p>
             <h2 id="faq-h2">Frequently <em>Asked</em></h2>
           </div>
-          <span class="sec-count" aria-hidden="true">04</span>
+          <span class="sec-count" aria-hidden="true">05</span>
         </div>
 
         <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
@@ -1058,10 +1145,10 @@
       <div class="sec-wrap">
         <div class="sec-header">
           <div>
-            <p class="sec-label">05 — Background</p>
+            <p class="sec-label">06 — Background</p>
             <h2 id="edu-h2" style="color:var(--paper)">Edu<em>cation</em></h2>
           </div>
-          <span class="sec-count" aria-hidden="true">05</span>
+          <span class="sec-count" aria-hidden="true">06</span>
         </div>
         <div class="edu-layout">
           <div class="edu-big">
@@ -1082,10 +1169,10 @@
       <div class="sec-wrap">
         <div class="sec-header">
           <div>
-            <p class="sec-label">06 — Hire Me</p>
+            <p class="sec-label">07 — Hire Me</p>
             <h2 id="contact-h2">Let's <em>Work Together</em></h2>
           </div>
-          <span class="sec-count" aria-hidden="true">06</span>
+          <span class="sec-count" aria-hidden="true">07</span>
         </div>
 
         <div class="contact-layout">
