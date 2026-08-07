@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Building a Warehouse Management System From Scratch — MyUpchar.com Case Study</title>
+<meta name="description" content="How I built a Ruby on Rails warehouse management system from scratch for MyUpchar.com as the sole engineer on the product, end to end."/>
+<meta name="author" content="Navin Kumar"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rubyonrails.info/work/myupchar-warehouse-management-system.html"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Building a Warehouse Management System From Scratch — MyUpchar.com"/>
+<meta property="og:description" content="How I built a Ruby on Rails warehouse management system from scratch for MyUpchar.com as the sole engineer on the product, end to end."/>
+<meta property="og:url" content="https://rubyonrails.info/work/myupchar-warehouse-management-system.html"/>
+<meta property="og:image" content="https://rubyonrails.info/og-image.png"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta property="og:site_name" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta property="og:locale" content="en_IN"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Building a Warehouse Management System From Scratch — MyUpchar.com"/>
+<meta name="twitter:image" content="https://rubyonrails.info/og-image.png"/>
+<meta name="twitter:image:alt" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta name="twitter:creator" content="@dynamicnavin"/>
+<meta name="twitter:site" content="@dynamicnavin"/>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="alternate" type="application/atom+xml" title="Navin Kumar — Atom Feed" href="/feed.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Navin Kumar — RSS Feed" href="/rss.xml"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/blog/blog.css"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://rubyonrails.info/work/myupchar-warehouse-management-system.html#article",
+      "headline": "Building a Warehouse Management System From Scratch — MyUpchar.com",
+      "description": "How I built a Ruby on Rails warehouse management system from scratch for MyUpchar.com as the sole engineer on the product, end to end.",
+      "url": "https://rubyonrails.info/work/myupchar-warehouse-management-system.html",
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "@id": "https://rubyonrails.info/#person", "name": "Navin Kumar", "url": "https://rubyonrails.info/" },
+      "publisher": { "@type": "Person", "@id": "https://rubyonrails.info/#person", "name": "Navin Kumar", "url": "https://rubyonrails.info/", "image": "https://rubyonrails.info/og-image.png" },
+      "mainEntityOfPage": "https://rubyonrails.info/work/myupchar-warehouse-management-system.html",
+      "image": "https://rubyonrails.info/og-image.png",
+      "about": { "@type": "Organization", "name": "MyUpchar.com" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rubyonrails.info/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://rubyonrails.info/work/" },
+        { "@type": "ListItem", "position": 3, "name": "MyUpchar Warehouse Management System", "item": "https://rubyonrails.info/work/myupchar-warehouse-management-system.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="site-nav" role="navigation" aria-label="Primary navigation">
+  <div class="site-nav__inner">
+    <a class="logo" href="/#hero">Navin<em>.</em></a>
+    <ul class="nav-list" role="list">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/work/" class="active">Work</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Hire Me</a></li>
+    </ul>
+    <a href="mailto:navinkumar2508@gmail.com" class="nav-cta">Hire Me →</a>
+  </div>
+</div>
+
+<main id="main-content">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/work/">Work</a> / MyUpchar Warehouse Management System</p>
+
+  <p class="art-eyebrow">Product Build · MyUpchar.com</p>
+  <h1 class="art-title">Building a Warehouse Management System From Scratch</h1>
+  <p class="art-meta">By <a href="/#about">Navin Kumar</a> · Senior Ruby on Rails Engineer · Sep 2019 – Oct 2020</p>
+
+  <p class="art-dek">Sole ownership of a Ruby on Rails warehouse management system, end to end — plus a hand in order management, the content website, and the consultations product.</p>
+
+  <article class="body">
+    <p class="lead"><strong>Short version:</strong> MyUpchar needed a warehouse management system and didn't have one. I built it from the ground up in Rails, owned it alone in production, and picked up related work across the order management and content platforms along the way.</p>
+
+    <h2>The context</h2>
+    <p>MyUpchar.com runs a health-information and online-consultation platform with a medicine and health-product delivery arm. That delivery side needs a real warehouse operation behind it — inventory has to be tracked, stock has to move, and orders have to be fulfilled accurately. When I joined, that system didn't exist yet in a form the business could rely on.</p>
+
+    <h2>What I built</h2>
+    <p>I designed and built a Ruby on Rails warehouse management system (WMS) from scratch — inventory tracking, stock movement, and the fulfillment workflow connecting incoming orders to what was physically in the warehouse. There was no existing codebase to extend and no prior engineer's decisions to inherit; the data model, the background job design, and the operational workflows were mine to define.</p>
+    <p>I was the only engineer on the product. Every bug report and every new requirement — from warehouse staff on the ground and from the business side — came to me directly, with no hand-off layer in between. That meant owning the full loop: understanding the operational problem, shipping the fix or feature, and living with the consequences of that decision in production the next day.</p>
+
+    <h2>Beyond the WMS</h2>
+    <p>Alongside the warehouse system, I worked across the wider product surface: the order management flow that fed into it, the company's content website, and the consultations product connecting users with doctors. Owning a single product end to end while also contributing across adjacent systems is a different kind of work than shipping features against someone else's backlog — it required keeping the whole picture in view, not just the ticket in front of me.</p>
+
+    <h2>Outcome</h2>
+    <ul>
+      <li>Shipped a production warehouse management system from a blank slate, with no prior system to fall back on</li>
+      <li>Improved operational efficiency by roughly 40% through backend workflow automation in Rails</li>
+      <li>Reduced API latency and improved service reliability across the distributed systems the WMS talked to</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Why this matters if you're hiring:</strong> building a system from zero and being the only person accountable for it teaches a different kind of judgment than maintaining an established codebase — you learn to make architecture calls that hold up six months later, because there's no one else to catch the ones that don't.</p>
+    </div>
+
+    <div class="cta-box">
+      <p>Need someone who can own a system end to end, not just implement a spec? <em>Let's talk about your project.</em></p>
+      <a href="/#contact" class="btn-solid">Start a conversation →</a>
+    </div>
+
+    <div class="author-bio">
+      <div class="initials" aria-hidden="true">NK</div>
+      <div>
+        <p class="name">Navin Kumar</p>
+        <p class="desc">Freelance Ruby on Rails developer and engineering leader with 9+ years shipping SaaS platforms, REST APIs, and microservices on AWS. Currently Lead Software Engineer at CloudBolt Software. <a href="/#contact">Get in touch</a> or see the <a href="https://rubyonrails.tech/" target="_blank" rel="noopener">full engineering portfolio</a>.</p>
+      </div>
+    </div>
+  </article>
+
+  <p class="breadcrumb" style="margin-top:40px;">More case studies: <a href="/work/pyramid-rails-upgrade-insurance-healthcare.html">Legacy Rails upgrade for a healthcare client</a> · <a href="/work/cloudbolt-multi-cloud-billing-platform.html">Multi-cloud billing platform</a></p>
+</main>
+
+<footer>
+  <span>© <time datetime="2026">2026</time> Navin Kumar — Freelance Ruby on Rails Developer</span>
+  <nav aria-label="Footer links">
+    <a href="/">Home</a> · <a href="/work/">Work</a> · <a href="/sitemap.xml">Sitemap</a>
+  </nav>
+  <span class="f-amber">Available for Freelance ✦</span>
+</footer>
+</body>
+</html>

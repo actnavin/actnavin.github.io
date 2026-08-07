@@ -35,6 +35,15 @@ Navin Kumar is a freelance Ruby on Rails developer and Application Engineering L
 6. Fractional tech lead / engineering management
 7. Rails code review and architecture audits
 
+## Case Studies
+
+Detailed write-ups of real Ruby on Rails projects — problem, approach, and outcome:
+
+- https://rubyonrails.info/work/myupchar-warehouse-management-system.html — Building a Warehouse Management System From Scratch (MyUpchar.com)
+- https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html — Upgrading a Legacy Rails App in a Compliance-Sensitive Domain (Pyramid IT Consulting)
+- https://rubyonrails.info/work/kreatio-cms-for-media-houses.html — A Multi-Tenant Rails CMS for Media Houses (Kreatio Software)
+- https://rubyonrails.info/work/cloudbolt-multi-cloud-billing-platform.html — Scaling a Multi-Cloud Billing Platform for CSPs and MSPs (CloudBolt Software)
+
 ## Articles (hiring & freelancing guides)
 
 These pages answer common questions about hiring and budgeting for a Ruby on Rails developer or freelancer:
@@ -47,8 +56,9 @@ These pages answer common questions about hiring and budgeting for a Ruby on Rai
 
 - **Lead Software Engineer**, CloudBolt Software (Jun 2022 – Present) — leads 5+ engineers, drove monolith-to-microservices migration, ~30% response-time reduction, 99.9%+ uptime.
 - **Senior Software Engineer**, CloudBolt Software (Oct 2020 – Jun 2022) — REST APIs, AWS CloudFormation automation, mentorship.
-- **Senior Software Development Engineer**, MyUpchar.com (Sep 2019 – Oct 2020) — e-commerce and warehouse automation backend, ~40% efficiency gain.
-- **Software Engineer**, Kreatio Software Pvt Ltd (Aug 2016 – Mar 2019) — Rails applications and RESTful services.
+- **Senior Software Development Engineer**, MyUpchar.com (Sep 2019 – Oct 2020) — built a warehouse management system from scratch as sole owner, e-commerce backend, ~40% efficiency gain.
+- **Software Engineer, Ruby on Rails**, Pyramid IT Consulting Pvt Ltd (Mar 2019 – Aug 2019) — upgraded a legacy Rails app to a current release for an insurance and healthcare client.
+- **Software Engineer**, Kreatio Software Pvt Ltd (Aug 2016 – Mar 2019) — Rails applications and RESTful services for a multi-tenant CMS product.
 
 ## Education
 

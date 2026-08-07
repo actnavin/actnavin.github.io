@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Upgrading a Legacy Rails App in a Compliance-Sensitive Domain — Case Study</title>
+<meta name="description" content="How I upgraded a legacy Ruby on Rails application to a current, supported release for an insurance and healthcare client at Pyramid IT Consulting."/>
+<meta name="author" content="Navin Kumar"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Upgrading a Legacy Rails App in a Compliance-Sensitive Domain — Pyramid IT Consulting"/>
+<meta property="og:description" content="How I upgraded a legacy Ruby on Rails application to a current, supported release for an insurance and healthcare client at Pyramid IT Consulting."/>
+<meta property="og:url" content="https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html"/>
+<meta property="og:image" content="https://rubyonrails.info/og-image.png"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta property="og:site_name" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta property="og:locale" content="en_IN"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Upgrading a Legacy Rails App in a Compliance-Sensitive Domain"/>
+<meta name="twitter:image" content="https://rubyonrails.info/og-image.png"/>
+<meta name="twitter:image:alt" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta name="twitter:creator" content="@dynamicnavin"/>
+<meta name="twitter:site" content="@dynamicnavin"/>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="alternate" type="application/atom+xml" title="Navin Kumar — Atom Feed" href="/feed.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Navin Kumar — RSS Feed" href="/rss.xml"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/blog/blog.css"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html#article",
+      "headline": "Upgrading a Legacy Rails App in a Compliance-Sensitive Domain — Pyramid IT Consulting",
+      "description": "How I upgraded a legacy Ruby on Rails application to a current, supported release for an insurance and healthcare client at Pyramid IT Consulting.",
+      "url": "https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html",
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "@id": "https://rubyonrails.info/#person", "name": "Navin Kumar", "url": "https://rubyonrails.info/" },
+      "publisher": { "@type": "Person", "@id": "https://rubyonrails.info/#person", "name": "Navin Kumar", "url": "https://rubyonrails.info/", "image": "https://rubyonrails.info/og-image.png" },
+      "mainEntityOfPage": "https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html",
+      "image": "https://rubyonrails.info/og-image.png",
+      "about": { "@type": "Organization", "name": "Pyramid IT Consulting Pvt Ltd" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rubyonrails.info/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://rubyonrails.info/work/" },
+        { "@type": "ListItem", "position": 3, "name": "Pyramid IT Consulting Rails Upgrade", "item": "https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="site-nav" role="navigation" aria-label="Primary navigation">
+  <div class="site-nav__inner">
+    <a class="logo" href="/#hero">Navin<em>.</em></a>
+    <ul class="nav-list" role="list">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/work/" class="active">Work</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Hire Me</a></li>
+    </ul>
+    <a href="mailto:navinkumar2508@gmail.com" class="nav-cta">Hire Me →</a>
+  </div>
+</div>
+
+<main id="main-content">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/work/">Work</a> / Pyramid IT Consulting Rails Upgrade</p>
+
+  <p class="art-eyebrow">Legacy Upgrade · Pyramid IT Consulting</p>
+  <h1 class="art-title">Upgrading a Legacy Rails App in a Compliance-Sensitive Domain</h1>
+  <p class="art-meta">By <a href="/#about">Navin Kumar</a> · Software Engineer, Ruby on Rails · Mar 2019 – Aug 2019</p>
+
+  <p class="art-dek">Moving an insurance and healthcare client's Ruby on Rails application onto a current, supported release — without breaking what was already in production.</p>
+
+  <article class="body">
+    <p class="lead"><strong>Short version:</strong> a client in the insurance and healthcare space was running a Ruby on Rails application on an older major version. I upgraded it to a current, supported release, modernised background job processing with Sidekiq along the way, and worked directly with client stakeholders to keep the migration low-risk in a domain where mistakes are expensive.</p>
+
+    <h2>The context</h2>
+    <p>Legacy Rails upgrades carry a specific kind of risk in insurance and healthcare: the application usually touches sensitive data and business-critical workflows, so "just bump the version and fix what breaks" isn't an acceptable plan. The client needed to get off an older, increasingly unsupported Rails release without disrupting the systems built on top of it.</p>
+
+    <h2>What I did</h2>
+    <p>I planned and executed the upgrade to a current, supported Rails release — working through the deprecations, dependency bumps, and behavioural changes that come with moving a real, running application forward rather than starting fresh. As part of the same engagement, I modernised the application's background job processing using Sidekiq, replacing older job-handling patterns with something more reliable to operate and easier to reason about.</p>
+    <p>Because this was a compliance-sensitive domain, the technical work wasn't the only constraint. I worked directly with client stakeholders to scope the upgrade, sequence it into safe stages, and de-risk it — flagging what needed manual verification rather than assuming automated test coverage caught everything a healthcare or insurance workflow depends on.</p>
+
+    <h2>Why this is harder than a greenfield build</h2>
+    <p>Upgrading a legacy application means every decision is constrained by what's already there. You inherit someone else's data model, someone else's conventions, and — in a regulated-adjacent domain — someone else's tolerance for risk. The job is as much about judgment on what <em>not</em> to touch as it is about writing the upgrade code itself.</p>
+
+    <div class="callout">
+      <p><strong>Why this matters if you're hiring:</strong> a lot of Rails developers can write new features. Fewer have sat with a legacy, business-critical application and made the call on what's safe to change, in what order, without a client's operations grinding to a halt.</p>
+    </div>
+
+    <div class="cta-box">
+      <p>Sitting on a Rails app that's a version or two (or five) behind? <em>Let's talk about what a safe upgrade path looks like.</em></p>
+      <a href="/#contact" class="btn-solid">Start a conversation →</a>
+    </div>
+
+    <div class="author-bio">
+      <div class="initials" aria-hidden="true">NK</div>
+      <div>
+        <p class="name">Navin Kumar</p>
+        <p class="desc">Freelance Ruby on Rails developer and engineering leader with 9+ years shipping SaaS platforms, REST APIs, and microservices on AWS. Currently Lead Software Engineer at CloudBolt Software. <a href="/#contact">Get in touch</a> or see the <a href="https://rubyonrails.tech/" target="_blank" rel="noopener">full engineering portfolio</a>.</p>
+      </div>
+    </div>
+  </article>
+
+  <p class="breadcrumb" style="margin-top:40px;">More case studies: <a href="/work/myupchar-warehouse-management-system.html">Warehouse management system, built from scratch</a> · <a href="/work/kreatio-cms-for-media-houses.html">Multi-tenant CMS for media houses</a></p>
+</main>
+
+<footer>
+  <span>© <time datetime="2026">2026</time> Navin Kumar — Freelance Ruby on Rails Developer</span>
+  <nav aria-label="Footer links">
+    <a href="/">Home</a> · <a href="/work/">Work</a> · <a href="/sitemap.xml">Sitemap</a>
+  </nav>
+  <span class="f-amber">Available for Freelance ✦</span>
+</footer>
+</body>
+</html>
