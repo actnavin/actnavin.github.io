@@ -10,7 +10,7 @@
   <link rel="self"      type="application/atom+xml"   href="https://rubyonrails.info/feed.xml"/>
   <link rel="related"   type="application/rss+xml"    href="https://rubyonrails.info/rss.xml"/>
   <link rel="related"   type="application/feed+json"  href="https://rubyonrails.info/feed.json"/>
-  <updated>2026-08-05T00:00:00+05:30</updated>
+  <updated>2026-08-07T00:00:00+05:30</updated>
   <rights>© 2026 Navin Kumar. All rights reserved.</rights>
 
   <author>
@@ -66,6 +66,64 @@
     <category term="hiring" label="Hiring"/>
     <category term="ruby-on-rails" label="Ruby on Rails"/>
     <category term="freelance" label="Freelance"/>
+  </entry>
+
+  <!-- ── Case study entries ── -->
+  <entry>
+    <id>https://rubyonrails.info/work/cloudbolt-multi-cloud-billing-platform.html</id>
+    <title type="text">Scaling a Multi-Cloud Billing Platform for CSPs and MSPs</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/work/cloudbolt-multi-cloud-billing-platform.html"/>
+    <updated>2026-08-07T00:00:00+05:30</updated>
+    <published>2026-08-07T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;Leading the Ruby on Rails team behind CloudBolt's multi-cloud management platform, helping CSPs and MSPs manage billing across public clouds.&lt;/p&gt;
+    </summary>
+    <category term="case-study" label="Case Study"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
+    <category term="engineering-leadership" label="Engineering Leadership"/>
+  </entry>
+
+  <entry>
+    <id>https://rubyonrails.info/work/myupchar-warehouse-management-system.html</id>
+    <title type="text">Building a Warehouse Management System From Scratch</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/work/myupchar-warehouse-management-system.html"/>
+    <updated>2026-08-07T00:00:00+05:30</updated>
+    <published>2026-08-07T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;How I built a Ruby on Rails warehouse management system from scratch for MyUpchar.com as the sole engineer on the product, end to end.&lt;/p&gt;
+    </summary>
+    <category term="case-study" label="Case Study"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
+  </entry>
+
+  <entry>
+    <id>https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html</id>
+    <title type="text">Upgrading a Legacy Rails App in a Compliance-Sensitive Domain</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html"/>
+    <updated>2026-08-07T00:00:00+05:30</updated>
+    <published>2026-08-07T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;How I upgraded a legacy Ruby on Rails application to a current, supported release for an insurance and healthcare client.&lt;/p&gt;
+    </summary>
+    <category term="case-study" label="Case Study"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
+  </entry>
+
+  <entry>
+    <id>https://rubyonrails.info/work/kreatio-cms-for-media-houses.html</id>
+    <title type="text">A Multi-Tenant Rails CMS for Media Houses</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/work/kreatio-cms-for-media-houses.html"/>
+    <updated>2026-08-07T00:00:00+05:30</updated>
+    <published>2026-08-07T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;How I helped build and maintain Kreatio Software's Ruby on Rails CMS product, used by media house clients to manage and monetise content.&lt;/p&gt;
+    </summary>
+    <category term="case-study" label="Case Study"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
   </entry>
 
   <!-- ── Portfolio update entry ── -->

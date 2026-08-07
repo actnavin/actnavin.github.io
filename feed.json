@@ -59,6 +59,54 @@
       "language": "en"
     },
     {
+      "id": "https://rubyonrails.info/work/cloudbolt-multi-cloud-billing-platform.html",
+      "url": "https://rubyonrails.info/work/cloudbolt-multi-cloud-billing-platform.html",
+      "title": "Scaling a Multi-Cloud Billing Platform for CSPs and MSPs",
+      "content_html": "<p>Leading the Ruby on Rails team behind CloudBolt's multi-cloud management platform, helping CSPs and MSPs manage billing across public clouds.</p>",
+      "summary": "Case study: leading the engineering team behind CloudBolt's multi-cloud billing platform.",
+      "date_published": "2026-08-07T00:00:00+05:30",
+      "date_modified": "2026-08-07T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["case-study", "ruby-on-rails", "engineering-leadership"],
+      "language": "en"
+    },
+    {
+      "id": "https://rubyonrails.info/work/myupchar-warehouse-management-system.html",
+      "url": "https://rubyonrails.info/work/myupchar-warehouse-management-system.html",
+      "title": "Building a Warehouse Management System From Scratch",
+      "content_html": "<p>How I built a Ruby on Rails warehouse management system from scratch for MyUpchar.com as the sole engineer on the product, end to end.</p>",
+      "summary": "Case study: sole ownership of a Rails WMS build for MyUpchar.com.",
+      "date_published": "2026-08-07T00:00:00+05:30",
+      "date_modified": "2026-08-07T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["case-study", "ruby-on-rails"],
+      "language": "en"
+    },
+    {
+      "id": "https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html",
+      "url": "https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html",
+      "title": "Upgrading a Legacy Rails App in a Compliance-Sensitive Domain",
+      "content_html": "<p>How I upgraded a legacy Ruby on Rails application to a current, supported release for an insurance and healthcare client.</p>",
+      "summary": "Case study: a legacy Rails upgrade for an insurance and healthcare client.",
+      "date_published": "2026-08-07T00:00:00+05:30",
+      "date_modified": "2026-08-07T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["case-study", "ruby-on-rails"],
+      "language": "en"
+    },
+    {
+      "id": "https://rubyonrails.info/work/kreatio-cms-for-media-houses.html",
+      "url": "https://rubyonrails.info/work/kreatio-cms-for-media-houses.html",
+      "title": "A Multi-Tenant Rails CMS for Media Houses",
+      "content_html": "<p>How I helped build and maintain Kreatio Software's Ruby on Rails CMS product, used by media house clients to manage and monetise content.</p>",
+      "summary": "Case study: product engineering on Kreatio's multi-tenant Rails CMS.",
+      "date_published": "2026-08-07T00:00:00+05:30",
+      "date_modified": "2026-08-07T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["case-study", "ruby-on-rails"],
+      "language": "en"
+    },
+    {
       "id": "https://rubyonrails.info/#portfolio-2026",
       "url": "https://rubyonrails.info/",
       "title": "Portfolio Updated — March 2026",

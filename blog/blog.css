@@ -69,7 +69,16 @@ body {
 }
 .nav-cta:hover { background: var(--amber); }
 
-@media (max-width: 768px) { .nav-list { display: none; } }
+@media (max-width: 768px) {
+  .site-nav__inner { gap: 14px; }
+  .nav-list {
+    display: flex; flex: 1 1 auto; overflow-x: auto;
+    gap: 22px; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .nav-list::-webkit-scrollbar { display: none; }
+  .nav-list a { white-space: nowrap; }
+  .nav-cta { flex-shrink: 0; }
+}
 
 /* ── PAGE / ARTICLE LAYOUT ── */
 main { max-width: 760px; margin: 0 auto; padding: clamp(40px,6vw,72px) var(--px) clamp(60px,8vw,100px); }

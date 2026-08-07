@@ -15,7 +15,7 @@ if [[ "$#" -gt 0 ]]; then
   done
   URLS_JSON+="]"
 else
-  URLS_JSON='["https://rubyonrails.info/", "https://rubyonrails.info/#about", "https://rubyonrails.info/#experience", "https://rubyonrails.info/#skills", "https://rubyonrails.info/#education", "https://rubyonrails.info/#contact", "https://rubyonrails.info/blog/", "https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html", "https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html", "https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html"]'
+  URLS_JSON='["https://rubyonrails.info/", "https://rubyonrails.info/#about", "https://rubyonrails.info/#experience", "https://rubyonrails.info/#testimonials", "https://rubyonrails.info/#skills", "https://rubyonrails.info/#education", "https://rubyonrails.info/#contact", "https://rubyonrails.info/blog/", "https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html", "https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html", "https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html", "https://rubyonrails.info/work/", "https://rubyonrails.info/work/myupchar-warehouse-management-system.html", "https://rubyonrails.info/work/pyramid-rails-upgrade-insurance-healthcare.html", "https://rubyonrails.info/work/kreatio-cms-for-media-houses.html", "https://rubyonrails.info/work/cloudbolt-multi-cloud-billing-platform.html"]'
 fi
 
 PAYLOAD=$(cat <<JSON
