@@ -4,6 +4,15 @@
 User-agent: *
 Allow: /
 
+# Non-existent paths repeatedly probed by bots/scrapers (never part of this
+# site — see Search Console "Not found (404)" report) — explicitly disallowed
+# so crawlers stop re-attempting them.
+Disallow: /pt/
+Disallow: /ru/
+Disallow: /ja/
+Disallow: /tr/
+Disallow: /lander
+
 # AI crawlers — explicitly allowed
 User-agent: GPTBot
 Allow: /
