@@ -13,8 +13,8 @@
     <copyright>© 2026 Navin Kumar. All rights reserved.</copyright>
     <managingEditor>navinkumar2508@gmail.com (Navin Kumar)</managingEditor>
     <webMaster>navinkumar2508@gmail.com (Navin Kumar)</webMaster>
-    <lastBuildDate>Fri, 07 Aug 2026 00:00:00 +0530</lastBuildDate>
-    <pubDate>Fri, 07 Aug 2026 00:00:00 +0530</pubDate>
+    <lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0530</lastBuildDate>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 +0530</pubDate>
     <ttl>2880</ttl>
     <image>
       <url>https://rubyonrails.info/og-image.png</url>
@@ -26,6 +26,18 @@
     <sy:updatePeriod>monthly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <atom:link href="https://rubyonrails.info/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>How to Find and Fix N+1 Queries in Rails</title>
+      <link>https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html</link>
+      <guid isPermaLink="true">https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0530</pubDate>
+      <dc:creator>Navin Kumar</dc:creator>
+      <description>How to spot and fix N+1 queries in Rails using bullet and rack-mini-profiler, and when to reach for includes, preload, or eager_load.</description>
+      <category>Performance</category>
+      <category>Ruby on Rails</category>
+      <category>Engineering</category>
+    </item>
 
     <item>
       <title>12 Questions to Ask Before Hiring a Ruby on Rails Freelancer</title>

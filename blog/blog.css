@@ -105,6 +105,15 @@ article.body ul, article.body ol { margin: 0 0 24px 22px; }
 article.body li { font-family: var(--sans); font-size: clamp(15px,1.7vw,17px); color: var(--ink); line-height: 1.8; margin-bottom: 10px; }
 article.body blockquote { border-left: 3px solid var(--amber); padding-left: 20px; margin: 28px 0; font-family: var(--serif); font-style: italic; color: var(--mid); font-size: clamp(16px,2vw,19px); }
 
+article.body code { font-family: var(--mono); font-size: .9em; background: var(--cream); border: 1px solid var(--border); border-radius: 3px; padding: .15em .4em; color: var(--ink); }
+article.body pre {
+  background: var(--ink); color: var(--paper); border-radius: 4px;
+  padding: 20px 22px; margin: 24px 0; overflow-x: auto;
+  font-family: var(--mono); font-size: 13px; line-height: 1.6;
+}
+article.body pre code { background: none; border: none; padding: 0; color: inherit; font-size: 1em; }
+article.body .code-label { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); margin: 24px 0 -12px; display: block; }
+
 table.rates { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-family: var(--sans); font-size: 14px; }
 table.rates caption { text-align: left; font-family: var(--mono); font-size: 11px; color: var(--mid); margin-bottom: 8px; }
 table.rates th, table.rates td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }

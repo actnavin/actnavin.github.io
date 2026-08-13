@@ -23,6 +23,18 @@
   ],
   "items": [
     {
+      "id": "https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html",
+      "url": "https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html",
+      "title": "How to Find and Fix N+1 Queries in Rails",
+      "content_html": "<p>How to spot and fix N+1 queries in Rails using bullet and rack-mini-profiler, and when to reach for includes, preload, or eager_load.</p>",
+      "summary": "Performance guide: finding and fixing N+1 queries in Rails, and why includes doesn't always work.",
+      "date_published": "2026-08-13T00:00:00+05:30",
+      "date_modified": "2026-08-13T00:00:00+05:30",
+      "authors": [{ "name": "Navin Kumar", "url": "https://rubyonrails.info/" }],
+      "tags": ["performance", "ruby-on-rails", "engineering"],
+      "language": "en"
+    },
+    {
       "id": "https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html",
       "url": "https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html",
       "title": "12 Questions to Ask Before Hiring a Ruby on Rails Freelancer",

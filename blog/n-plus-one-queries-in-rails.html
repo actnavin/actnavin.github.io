@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>How to Find and Fix N+1 Queries in Rails</title>
+<meta name="description" content="How to spot and fix N+1 queries in Rails using bullet and rack-mini-profiler, and when to reach for includes, preload, or eager_load."/>
+<meta name="author" content="Navin Kumar"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="How to Find and Fix N+1 Queries in Rails"/>
+<meta property="og:description" content="How to spot and fix N+1 queries in Rails using bullet and rack-mini-profiler, and when to reach for includes, preload, or eager_load."/>
+<meta property="og:url" content="https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html"/>
+<meta property="og:image" content="https://rubyonrails.info/og-image.png"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta property="og:site_name" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta property="og:locale" content="en_IN"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="How to Find and Fix N+1 Queries in Rails"/>
+<meta name="twitter:description" content="Spotting and fixing N+1 queries with bullet, rack-mini-profiler, and the right eager-loading strategy."/>
+<meta name="twitter:image" content="https://rubyonrails.info/og-image.png"/>
+<meta name="twitter:image:alt" content="Navin Kumar — Freelance Ruby on Rails Developer"/>
+<meta name="twitter:creator" content="@dynamicnavin"/>
+<meta name="twitter:site" content="@dynamicnavin"/>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="alternate" type="application/atom+xml" title="Navin Kumar — Atom Feed" href="/feed.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Navin Kumar — RSS Feed" href="/rss.xml"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/blog/blog.css"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html#article",
+      "headline": "How to Find and Fix N+1 Queries in Rails",
+      "description": "How to spot and fix N+1 queries in Rails using bullet and rack-mini-profiler, and when to reach for includes, preload, or eager_load.",
+      "url": "https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html",
+      "datePublished": "2026-08-13",
+      "dateModified": "2026-08-13",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "@id": "https://rubyonrails.info/#person", "name": "Navin Kumar", "url": "https://rubyonrails.info/" },
+      "publisher": { "@type": "Person", "@id": "https://rubyonrails.info/#person", "name": "Navin Kumar", "url": "https://rubyonrails.info/", "image": "https://rubyonrails.info/og-image.png" },
+      "mainEntityOfPage": "https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html",
+      "image": "https://rubyonrails.info/og-image.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rubyonrails.info/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rubyonrails.info/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "N+1 Queries in Rails", "item": "https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does includes always fix an N+1 query in Rails?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only if the association is actually accessed the way Rails expects. includes loads the association into memory, but if your code calls a scope or a method that triggers a fresh query on the association (rather than reading the already-loaded records), you can still get an N+1 even with includes in place. Always verify with a query count, not just by adding includes and assuming it worked." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between includes, preload, and eager_load in Rails?",
+          "acceptedAnswer": { "@type": "Answer", "text": "preload always runs a separate query per association (two total queries for one level of nesting). eager_load always uses a single query with a LEFT OUTER JOIN. includes picks one of the two automatically: preload's separate-query strategy by default, or eager_load's JOIN strategy if you reference the association in a where or order clause that needs SQL-level access to it." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can N+1 queries happen in an API that uses a serializer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it's one of the most common places they hide. If a serializer (ActiveModel::Serializer, jbuilder, or a custom hash builder) calls an association method for every record in a collection, and the controller only loaded the top-level records without eager loading, you get exactly one query per record on top of the original query." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="site-nav" role="navigation" aria-label="Primary navigation">
+  <div class="site-nav__inner">
+    <a class="logo" href="/#hero">Navin<em>.</em></a>
+    <ul class="nav-list" role="list">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/#contact">Hire Me</a></li>
+    </ul>
+    <a href="mailto:navinkumar2508@gmail.com" class="nav-cta">Hire Me →</a>
+  </div>
+</div>
+
+<main id="main-content">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / N+1 Queries in Rails</p>
+
+  <p class="art-eyebrow">Performance Guide</p>
+  <h1 class="art-title">How to Find and Fix N+1 Queries in Rails</h1>
+  <p class="art-meta">By <a href="/#about">Navin Kumar</a> · Freelance Ruby on Rails Developer &amp; Engineering Leader · Updated 13 Aug 2026 · 7 min read</p>
+
+  <p class="art-dek">The most common performance bug in Rails apps, why <code>includes</code> alone doesn't always fix it, and how to actually verify you've eliminated it rather than just hoping.</p>
+
+  <article class="body">
+    <p class="lead"><strong>Short answer:</strong> an N+1 query happens when loading N records triggers one extra query per record instead of one query total. Fix it by eager loading the association with <code>includes</code>, <code>preload</code>, or <code>eager_load</code> — but always confirm the fix with an actual query count, since eager loading code that doesn't match how the association is really accessed silently does nothing.</p>
+
+    <h2>What an N+1 query actually is</h2>
+    <p>Say you're rendering a list of blog posts with their author's name:</p>
+
+    <pre><code>posts = Post.limit(20)
+
+posts.each do |post|
+  puts post.author.name
+end</code></pre>
+
+    <p>This runs <strong>21 queries</strong>: one to load the 20 posts, then one more <em>per post</em> to load that post's author, because <code>post.author</code> triggers a fresh query the first time it's accessed on each individual post object. Twenty posts today, two hundred next quarter — the query count scales linearly with the data, which is exactly why this bug is invisible in development with a handful of seed records and painful in production.</p>
+
+    <h2>How to actually find them</h2>
+    <p>Don't rely on eyeballing the code — N+1s hide in scopes, serializers, and view partials just as often as in obvious loops. Three ways to catch them for real:</p>
+    <ul>
+      <li><strong>The <a href="https://github.com/flyerhzm/bullet" target="_blank" rel="noopener">bullet</a> gem</strong> — runs in development, watches your actual queries, and warns (in the browser, the log, or as an alert) exactly where an N+1 happened and which association triggered it. This is the single highest-value tool for this problem; if you don't have it installed, that's the first thing to add.</li>
+      <li><strong><a href="https://github.com/MiniProfiler/rack-mini-profiler" target="_blank" rel="noopener">rack-mini-profiler</a></strong> — shows a live query count and timing breakdown as a small overlay on every page while you develop, so you notice a page jump from 5 queries to 45 queries the moment you introduce the regression.</li>
+      <li><strong>Query-count assertions in tests</strong> — wrap a suspect action in <code>assert_queries_count</code> (Rails 7.1+) or the older <code>ActiveRecord::QueryRecorder</code> pattern, and fail the test if the count exceeds a fixed number. This is the only approach that actually prevents a fixed N+1 from silently coming back in a later refactor.</li>
+    </ul>
+
+    <h2>The fix: includes, preload, and eager_load</h2>
+    <p>All three tell Rails to load an association up front instead of lazily, but they're not interchangeable in how they do it:</p>
+    <table class="rates">
+      <caption>Rails eager-loading strategies</caption>
+      <thead><tr><th>Method</th><th>Strategy</th><th>Query count</th></tr></thead>
+      <tbody>
+        <tr><td><code>preload</code></td><td>Always a separate query per association</td><td>2 queries (posts, then authors)</td></tr>
+        <tr><td><code>eager_load</code></td><td>Always a single query via <code>LEFT OUTER JOIN</code></td><td>1 query</td></tr>
+        <tr><td><code>includes</code></td><td>Picks <code>preload</code> by default, switches to <code>eager_load</code> automatically if you reference the association in <code>where</code>/<code>order</code></td><td>1 or 2, depending</td></tr>
+      </tbody>
+    </table>
+
+    <p>The fix for the example above:</p>
+    <pre><code>posts = Post.includes(:author).limit(20)
+
+posts.each do |post|
+  puts post.author.name  # no extra query — already loaded
+end</code></pre>
+
+    <p>For most cases, <code>includes</code> is the right default — let Rails choose the strategy. Reach for <code>preload</code> explicitly when you want to guarantee separate queries (useful for very wide joins that would otherwise return a huge duplicated result set), and <code>eager_load</code> explicitly when you need to filter or sort by a column on the associated table:</p>
+    <pre><code># Needs eager_load (or includes, which will pick it automatically here)
+# because the WHERE clause touches the authors table directly.
+Post.eager_load(:author).where(authors: { verified: true })</code></pre>
+
+    <h2>Why includes sometimes doesn't work</h2>
+    <p>This is the part that trips people up: adding <code>includes</code> and assuming the problem is solved, without checking. A few ways it silently fails:</p>
+    <ul>
+      <li><strong>Calling a scope instead of the loaded association</strong> — <code>post.author</code> reads the preloaded record, but <code>post.author.posts.published</code> or any chained scope on the association re-queries, because a scope is a new relation, not the object already in memory.</li>
+      <li><strong>Conditional associations built at query time</strong> — if the association itself is defined with a runtime condition that can't be captured by a simple preload, Rails may fall back to querying per record anyway.</li>
+      <li><strong>Serializers that don't know what was preloaded</strong> — in a JSON API, if the controller eager loads correctly but the serializer independently calls a different, un-preloaded association for each record, you've just moved the N+1 one layer deeper. This is the single most common place I've found N+1s hiding in production Rails APIs — the controller looks correct in isolation, and the bug only shows up in the serializer layer.</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Rule of thumb:</strong> after adding eager loading, don't just eyeball it — check the actual query count (bullet, rack-mini-profiler, or a test assertion). "I added includes" is not the same claim as "I verified this page makes a fixed number of queries regardless of how many records it returns."</p>
+    </div>
+
+    <h2>When eager loading isn't enough</h2>
+    <p>A few situations where <code>includes</code>/<code>preload</code>/<code>eager_load</code> alone won't get you there:</p>
+    <ul>
+      <li><strong>You only need a count, not the records</strong> — use a <code>counter_cache</code> column instead of loading and counting an association's records.</li>
+      <li><strong>The association is polymorphic across many types</strong> — eager loading still works, but batch-load carefully; a naive preload across a large polymorphic association can pull in far more than you need.</li>
+      <li><strong>You're aggregating across a huge dataset</strong> — at that scale, a single SQL aggregate query (or a materialized view) usually beats loading records into Ruby at all, N+1 or not.</li>
+    </ul>
+
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Does includes always fix an N+1 query in Rails?</p>
+        <p class="faq-a">Only if the association is actually accessed the way Rails expects. If your code calls a scope or method that re-queries instead of reading the preloaded records, you can still get an N+1 with includes in place. Verify with a query count, not just by adding includes.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What is the difference between includes, preload, and eager_load?</p>
+        <p class="faq-a">preload always runs a separate query per association. eager_load always uses a single query with a LEFT OUTER JOIN. includes picks one of the two automatically based on whether you reference the association in a where or order clause.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can N+1 queries happen in a JSON API with a serializer?</p>
+        <p class="faq-a">Yes — it's one of the most common places they hide. If a serializer calls an association method per record and the controller didn't eager load that specific association, you get one query per record regardless of how clean the controller code looks.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <p>Got a Rails app with a slow, query-heavy endpoint? <em>I do performance audits — N+1s, indexing, and caching.</em></p>
+      <a href="/#contact" class="btn-solid">Get a quote →</a>
+    </div>
+
+    <div class="author-bio">
+      <div class="initials" aria-hidden="true">NK</div>
+      <div>
+        <p class="name">Navin Kumar</p>
+        <p class="desc">Freelance Ruby on Rails developer and engineering leader with 9+ years shipping SaaS platforms, REST APIs, and microservices on AWS. Currently Lead Software Engineer at CloudBolt Software. <a href="/#contact">Get in touch</a> or see the <a href="https://rubyonrails.tech/" target="_blank" rel="noopener">full engineering portfolio</a>.</p>
+      </div>
+    </div>
+  </article>
+
+  <p class="breadcrumb" style="margin-top:40px;">More: <a href="/work/pyramid-rails-upgrade-insurance-healthcare.html">A Rails performance &amp; upgrade case study</a> · <a href="/blog/how-to-hire-a-ruby-on-rails-developer.html">How to hire a Ruby on Rails developer</a></p>
+</main>
+
+<footer>
+  <span>© <time datetime="2026">2026</time> Navin Kumar — Freelance Ruby on Rails Developer</span>
+  <nav aria-label="Footer links">
+    <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/sitemap.xml">Sitemap</a>
+  </nav>
+  <span class="f-amber">Available for Freelance ✦</span>
+</footer>
+</body>
+</html>

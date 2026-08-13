@@ -44,10 +44,11 @@ Detailed write-ups of real Ruby on Rails projects — problem, approach, and out
 - https://rubyonrails.info/work/kreatio-cms-for-media-houses.html — A Multi-Tenant Rails CMS for Media Houses (Kreatio Software)
 - https://rubyonrails.info/work/cloudbolt-multi-cloud-billing-platform.html — Scaling a Multi-Cloud Billing Platform for CSPs and MSPs (CloudBolt Software)
 
-## Articles (hiring & freelancing guides)
+## Articles (hiring, freelancing & engineering guides)
 
-These pages answer common questions about hiring and budgeting for a Ruby on Rails developer or freelancer:
+Hiring/freelancing guides answer common questions about hiring and budgeting for a Ruby on Rails developer or freelancer; the engineering guide is technical, aimed at other Rails developers:
 
+- https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html — How to Find and Fix N+1 Queries in Rails (technical performance guide)
 - https://rubyonrails.info/blog/how-to-hire-a-ruby-on-rails-developer.html — How to Hire a Ruby on Rails Developer in 2026
 - https://rubyonrails.info/blog/ruby-on-rails-freelancer-rates.html — Ruby on Rails Freelancer Rates in 2026: What to Budget
 - https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html — 12 Questions to Ask Before Hiring a Ruby on Rails Freelancer

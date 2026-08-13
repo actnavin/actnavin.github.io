@@ -10,7 +10,7 @@
   <link rel="self"      type="application/atom+xml"   href="https://rubyonrails.info/feed.xml"/>
   <link rel="related"   type="application/rss+xml"    href="https://rubyonrails.info/rss.xml"/>
   <link rel="related"   type="application/feed+json"  href="https://rubyonrails.info/feed.json"/>
-  <updated>2026-08-07T00:00:00+05:30</updated>
+  <updated>2026-08-13T00:00:00+05:30</updated>
   <rights>© 2026 Navin Kumar. All rights reserved.</rights>
 
   <author>
@@ -23,6 +23,21 @@
   <icon>https://rubyonrails.info/favicon.svg</icon>
 
   <!-- ── Blog entries ── -->
+  <entry>
+    <id>https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html</id>
+    <title type="text">How to Find and Fix N+1 Queries in Rails</title>
+    <link rel="alternate" type="text/html" href="https://rubyonrails.info/blog/n-plus-one-queries-in-rails.html"/>
+    <updated>2026-08-13T00:00:00+05:30</updated>
+    <published>2026-08-13T00:00:00+05:30</published>
+    <author><name>Navin Kumar</name></author>
+    <summary type="html">
+      &lt;p&gt;How to spot and fix N+1 queries in Rails using bullet and rack-mini-profiler, and when to reach for includes, preload, or eager_load.&lt;/p&gt;
+    </summary>
+    <category term="performance" label="Performance"/>
+    <category term="ruby-on-rails" label="Ruby on Rails"/>
+    <category term="engineering" label="Engineering"/>
+  </entry>
+
   <entry>
     <id>https://rubyonrails.info/blog/questions-to-ask-ruby-on-rails-freelancer.html</id>
     <title type="text">12 Questions to Ask Before Hiring a Ruby on Rails Freelancer</title>
